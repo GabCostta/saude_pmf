@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OctoGab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fisica.html">Atividade Física</a></li>
+                <li><a href="imc.html">Calcular IMC</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>A saúde começa com uma alimentação saudável</h1>
+            <p>A prefeitura de Fortaleza está fazendo uma campanha para melhorar a saúde das pessoas. Este site fornece informações sobre bons hábitos alimentares e uma calculadora de IMC (Índice de Massa Corporal).</p>
+        </section>
+        <section>
+            <h2>Bons Hábitos Alimentares</h2>
+            <ul>
+                <li>Coma uma variedade de alimentos</li>
+                <li>Inclua frutas e vegetais em sua dieta</li>
+                <li>Reduza o consumo de açúcar e sal</li>
+                <li>Beba bastante água</li>
+                <li>Evite alimentos processados</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Calculadora de IMC</h2>
+            <form id="imcForm">
+                <label for="altura">Altura (m):</label>
+                <input type="number" id="altura" name="altura" step="0.01" required>
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso" step="0.1" required>
+                <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+            </form>
+            <p id="resultadoIMC"></p>
+            <img id="imagemIMC" src="" alt="Imagem representativa do IMC" style="display:none;">
+        </section>
+    </main>
+    <script>
+        function calcularIMC() {
+            const altura = parseFloat(document.getElementById('altura').value);
+            const peso = parseFloat(document.getElementById('peso').value);
+            const imc = (peso / (altura * altura)).toFixed(2);
+            const resultadoIMC = document.getElementById('resultadoIMC');
+            const imagemIMC = document.getElementById('imagemIMC');
+
+            resultadoIMC.textContent = `Seu IMC é ${imc}`;
+
+            if (imc < 18.5) {
+                imagemIMC.src = 'https://example.com/underweight.png';
+                imagemIMC.alt = 'Abaixo do peso';
+            } else if (imc >= 18.5 && imc < 24.9) {
+                imagemIMC.src = 'https://example.com/normal.png';
+                imagemIMC.alt = 'Peso normal';
+            } else if (imc >= 25 && imc < 29.9) {
+                imagemIMC.src = 'https://example.com/overweight.png';
+                imagemIMC.alt = 'Sobrepeso';
+            } else {
+                imagemIMC.src = 'https://example.com/obese.png';
+                imagemIMC.alt = 'Obesidade';
+            }
+
+            imagemIMC.style.display = 'block';
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Desenvolvido por Octogab</p>
+        <div class="redes-sociais">
+            <a href="https://www.linkedin.com/in/gabcostta" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5585997539628&text&type=phone_number&app_absent=0" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+            </a>
+            <a href="https://github.com/GabCostta" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub">
+            </a>
+            <a href="https://www.youtube.com/channel/UCsy9W9VO6udjaN-5IDAVyNg" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

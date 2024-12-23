@@ -1,0 +1,157 @@
+/* Define estilos globais para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #006994;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilo para a lista de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilo para os links de navegação */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #004d70;
+    border-radius: 5px;
+}
+
+/* Estilo para o título principal */
+h1 {
+    color: #006994;
+    text-align: center;
+}
+
+
+/* Estilo para os parágrafos */
+#txt{
+    padding: 10px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Estilo para as imagens */
+#img1 {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Estilo para as seções */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para os botões */
+button {
+    display: block;
+    padding: 5px;
+    margin: 0 auto;
+    color: #006994;
+}
+
+/* Estilo para as tabelas */
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #006994;
+    color: white;
+    text-align: left;
+}
+
+/* Estilo para a galeria (adaptado para Flexbox) */
+.gallery {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha para responsividade */
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+/* Estilo para as imagens da galeria */
+.gallery img {
+    width: 230px;
+    height: 150px;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    transform: scale(1.10);
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #006994;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Estilo para as redes sociais */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.redes-sociais img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Consultas de mídia para dispositivos móveis */
+@media (max-width: 600px) {
+    #img1 {
+        max-width: 100%;
+    }
+}
