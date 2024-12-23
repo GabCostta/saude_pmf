@@ -16,7 +16,7 @@ body {
 
 /* Estilo para o cabeçalho */
 header {
-    background-color: #006994;
+    background-color: #0033A0; /* Azul da Prefeitura de Fortaleza */
     padding: 10px;
     text-align: center;
     color: #fff;
@@ -39,19 +39,18 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #004d70;
+    background-color: #002080; /* Azul escuro para hover */
     border-radius: 5px;
 }
 
 /* Estilo para o título principal */
 h1 {
-    color: #006994;
+    color: #0033A0; /* Azul da Prefeitura de Fortaleza */
     text-align: center;
 }
 
-
 /* Estilo para os parágrafos */
-#txt{
+#txt {
     padding: 10px;
     color: #333;
     text-align: justify;
@@ -81,7 +80,7 @@ button {
     display: block;
     padding: 5px;
     margin: 0 auto;
-    color: #006994;
+    color: #0033A0; /* Azul da Prefeitura de Fortaleza */
 }
 
 /* Estilo para as tabelas */
@@ -97,7 +96,7 @@ table, th, td {
 }
 
 th {
-    background-color: #006994;
+    background-color: #0033A0; /* Azul da Prefeitura de Fortaleza */
     color: white;
     text-align: left;
 }
@@ -129,7 +128,7 @@ th {
 
 /* Estilo para o rodapé */
 footer {
-    background-color: #006994;
+    background-color: #0033A0; /* Azul da Prefeitura de Fortaleza */
     color: #fff;
     text-align: center;
     padding: 10px 0;

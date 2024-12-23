@@ -19,18 +19,36 @@
     <main>
         <section>
             <h1>A saúde começa com uma alimentação saudável</h1>
-            <p>A prefeitura de Fortaleza está fazendo uma campanha para melhorar a saúde das pessoas. Este site fornece informações sobre bons hábitos alimentares e uma calculadora de IMC (Índice de Massa Corporal).</p>
-        </section>
-        <section>
-            <h2>Bons Hábitos Alimentares</h2>
+            <p>A prefeitura de Fortaleza está promovendo uma campanha para melhorar a saúde da população. Este site fornece informações detalhadas sobre bons hábitos alimentares e uma calculadora de IMC (Índice de Massa Corporal) para ajudar você a monitorar sua saúde.</p>
+            <p>Uma alimentação saudável é fundamental para manter o corpo em equilíbrio e prevenir doenças. Aqui, você encontrará orientações sobre como adotar uma dieta balanceada, rica em nutrientes essenciais, e dicas para incorporar alimentos saudáveis no seu dia a dia.</p>
+            <p>Além disso, oferecemos uma ferramenta prática para calcular o seu IMC, que é um indicador importante para avaliar se você está dentro do peso ideal para a sua altura. Manter o IMC dentro dos limites recomendados é crucial para evitar problemas de saúde relacionados ao sobrepeso ou à desnutrição.</p>
+        <section class="section">
+            <h2>Para adultos, uma dieta saudável inclui:</h2>
             <ul>
-                <li>Coma uma variedade de alimentos</li>
-                <li>Inclua frutas e vegetais em sua dieta</li>
-                <li>Reduza o consumo de açúcar e sal</li>
-                <li>Beba bastante água</li>
-                <li>Evite alimentos processados</li>
+                <li>Frutas, verduras, legumes (como lentilha e feijão), nozes e cereais integrais (como milho, aveia, trigo e arroz integral).</li>
+                <li>Pelo menos 400g (o equivalente a cinco porções) de frutas e vegetais por dia, exceto batata, batata-doce, mandioca e outros tubérculos.</li>
+                <li>Menos de 10% da ingestão calórica total de açúcares livres, o que equivale a 50g (ou cerca de 12 colheres de chá) para uma pessoa com peso corporal saudável e que consome cerca de 2.000 calorias por dia. Idealmente, o consumo deve ser inferior a 5% da ingestão calórica total para benefícios adicionais à saúde. Açúcares livres são todos os açúcares adicionados aos alimentos ou bebidas pelos fabricantes, cozinheiros ou consumidores, bem como os açúcares naturalmente presentes no mel, xaropes, sucos de frutas e concentrados de sucos de frutas.</li>
+                <li>Menos de 30% da ingestão calórica diária procedente de gorduras. Gorduras não saturadas (presentes em peixes, abacate e nozes, bem como nos azeites de girassol, soja, canola e azeite) são preferíveis às gorduras saturadas (encontradas em carnes, manteiga, óleo de palma e coco, creme, queijo, ghee e banha) e às gorduras trans de todos os tipos, principalmente as produzidas industrialmente (alimentos assados e fritos, lanches e alimentos pré-embalados, como pizzas congeladas, tortas, biscoitos, bolachas, óleos e cremes), bem como as gorduras encontradas em carnes e laticínios de animais ruminantes, como vacas, ovelhas, cabras e camelos. Sugere-se que a ingestão de gorduras saturadas seja reduzida a menos de 10% da ingestão calórica total e das gorduras trans, a menos de 1%.</li>
+                <li>Menos de 5g de sal por dia, o equivalente a cerca de uma colher de chá. O sal deve ser iodado.</li>
             </ul>
         </section>
+        <section class="section">
+            <h2>Para bebês e crianças pequenas, uma dieta saudável inclui:</h2>
+            <ul>
+                <li>Nos primeiros dois anos de vida de uma criança, a nutrição ideal promove o crescimento saudável e melhora o desenvolvimento cognitivo. Também reduz o risco de obesidade e sobrepeso, bem como evita o desenvolvimento de DCNT mais tarde na vida.</li>
+                <li>Os conselhos para uma alimentação saudável durante a lactância e a infância são os mesmos que os dados aos adultos, sendo especialmente importantes os pontos abaixo:</li>
+            <ul>
+        </section>
+        <section class="section">
+            <h2>Bebês devem se alimentar exclusivamente de leite materno durante os seis primeiros meses de vida.</h2>
+            <ul>
+                <li>Devem ser amamentados continuamente até os dois anos de idade ou mais.</li>
+                <li>A partir dos seis meses, o aleitamento materno deve ser complementado com diferentes alimentos seguros e nutritivos. Não é recomendado adicionar sal ou açúcar a esses alimentos.</li>
+            </ul>
+            
+        </section>
+        
+        
         <section>
             <h2>Calculadora de IMC</h2>
             <form id="imcForm">
@@ -44,33 +62,9 @@
             <img id="imagemIMC" src="" alt="Imagem representativa do IMC" style="display:none;">
         </section>
     </main>
-    <script>
-        function calcularIMC() {
-            const altura = parseFloat(document.getElementById('altura').value);
-            const peso = parseFloat(document.getElementById('peso').value);
-            const imc = (peso / (altura * altura)).toFixed(2);
-            const resultadoIMC = document.getElementById('resultadoIMC');
-            const imagemIMC = document.getElementById('imagemIMC');
 
-            resultadoIMC.textContent = `Seu IMC é ${imc}`;
+    <script src="scripts.js"></script>
 
-            if (imc < 18.5) {
-                imagemIMC.src = 'https://example.com/underweight.png';
-                imagemIMC.alt = 'Abaixo do peso';
-            } else if (imc >= 18.5 && imc < 24.9) {
-                imagemIMC.src = 'https://example.com/normal.png';
-                imagemIMC.alt = 'Peso normal';
-            } else if (imc >= 25 && imc < 29.9) {
-                imagemIMC.src = 'https://example.com/overweight.png';
-                imagemIMC.alt = 'Sobrepeso';
-            } else {
-                imagemIMC.src = 'https://example.com/obese.png';
-                imagemIMC.alt = 'Obesidade';
-            }
-
-            imagemIMC.style.display = 'block';
-        }
-    </script>
     <footer>
         <p>&copy; 2024 Desenvolvido por Octogab</p>
         <div class="redes-sociais">
