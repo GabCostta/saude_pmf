@@ -1,0 +1,290 @@
+/* Importar a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Define estilos globais para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #0033A0; /* Azul da Prefeitura de Fortaleza */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilo para a lista de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilo para os links de navegação */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #002080; /* Azul escuro para hover */
+    border-radius: 5px;
+}
+
+/* Estilo para os parágrafos */
+#txt {
+    padding: 20px;
+    color: #333;
+    text-align: justify; /* Justificar o texto */;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 18px;
+    background-color: #fff; /* Fundo branco para destaque */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para as imagens */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para as seções */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os botões */
+button {
+    display: block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    color: #fff;
+    background-color: #0033A0; /* Azul da Prefeitura de Fortaleza */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #002080;
+}
+
+/* Estilo para as tabelas */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+th {
+    background-color: #0033A0; /* Azul da Prefeitura de Fortaleza */
+    color: white;
+    text-align: left;
+}
+
+/* Estilo para a galeria (adaptado para Flexbox) */
+.gallery {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha para responsividade */
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+/* Estilo para as imagens da galeria */
+.gallery img {
+    width: 230px;
+    height: 150px;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    object-fit: cover;
+}
+
+.gallery img:hover {
+    transform: scale(1.10);
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #0033A0; /* Azul da Prefeitura de Fortaleza */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+/* Estilo para as redes sociais */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.redes-sociais img {
+    width: 30px;
+    height: 30px;
+}
+
+.imc-calculator {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #b3e5fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.imc-calculator img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.imc-calculator h2 {
+    margin-bottom: 20px;
+    color: #0277bd;
+}
+
+.sexo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.sexo-femenino {
+    padding: 10px 20px;
+    border: 1px solid #fc28d8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sexo-masculino {
+    padding: 10px 20px;
+    border: 1px solid #0277bd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sexo input[type="radio"] {
+    display: none;
+}
+
+.sexo input[type="radio"]:checked + .sexo-femenino  {
+    background-color: #fc28d8;
+    color: white;
+}
+
+.sexo input[type="radio"]:checked + .sexo-masculino  {
+    background-color: #0277bd;
+    color: white;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    flex: 1;
+    text-align: left;
+    color: #333;
+}
+
+.input-group input {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #b3e5fc;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.calcular-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0288d1;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calcular-btn:hover {
+    background-color: #0277bd;
+}
+
+#resultadoIMC {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #0277bd;
+    border-radius: 5px;
+    background-color: #e1f5fe;
+    color: #0277bd;
+}
+
+/* Consultas de mídia para dispositivos móveis */
+@media (max-width: 600px) {
+    img {
+        max-width: 100%;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
